@@ -1,7 +1,7 @@
-*mbyte.txt*     For Vim version 7.4.  最近更新: 2013年8月
+*mbyte.txt*     For Vim version 8.0.  最近更新: 2017年8月
 
 
-                VIM 参考手册	  by Bram Moolenaar et al.
+		  VIM 参考手册    by Bram Moolenaar et al.
                 译者:yemao & lang2，Willis http://vimcdoc.sf.net
 
 多字节支持					*multibyte* *multi-byte*
@@ -726,10 +726,10 @@ Wnn4.2 是一个好输入系统。Wnn 4.2 包括，
 
   在 X 的国际化输入中，第一和第二个区被分别称为 "预编辑区" 和 "状态区"。第三和
   第四个区未被定义，而是留给输入法服务器 |IM-server| 来控制。在国际化输入中，
-  根据预编辑区与状态区的组合，划分出了四种输入风格: |OnTheSpot|，
-  |OffTheSpot|，|OverTheSpot| 和 |Root|。
+  根据预编辑区与状态区的组合，划分出了四种输入风格: |OnTheSpot|、
+  |OffTheSpot|、|OverTheSpot| 和 |Root|。
 
-  目前 GUI Vim 支持三种输入方式:  |OverTheSpot|，|OffTheSpot| 和 |Root|。
+  目前 GUI Vim 支持三种输入方式:  |OverTheSpot|、|OffTheSpot| 和 |Root|。
 
 *.  on-the-spot						*OnTheSpot*
     客户软件在其所用显示区内执行预编辑区和状态区。客户软件由 |IM-server| 控制
@@ -884,6 +884,7 @@ Vim 在普通状态下几乎不需要 IME，即使是在编辑多字节文本也
 如果键盘不能提供你需要输入的字符时，你可以使用 'keymap' (键盘映射表) 选项。它
 会把一个或多个 (英语) 字符翻译成另外一个 (非英语) 字符。这只会在输入文本，而不
 是输入 Vim 命令时发生。这样可以避免在两个键盘设置之间来回切换。
+{仅当编译时加入 |+keymap| 特性才有效}
 
 'keymap' 选项的值指定所使用的键盘映射表的文件名。该文件名可以是两者之一:
 
